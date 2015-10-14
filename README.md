@@ -1,3 +1,4 @@
+
 Blocipedia
 
 Create public and private markdown-based wikis
@@ -7,3 +8,6 @@ Create public and private markdown-based wikis
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+=======
+# blocipedia
+
