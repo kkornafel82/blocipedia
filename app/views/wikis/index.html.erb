@@ -1,0 +1,45 @@
+<h2 class = "text-center">Wikis</h2><br><br>
+<div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 center-table">
+          <table class="table table-striped table-bordered table-condensed table-hover" width="647">
+            <thead>
+            <tr class="text-center"> 
+               <td><strong> Wikis </strong></td>
+               <td></td>
+               <td></td>
+            </tr>
+            </thead>
+            <% @wikis.each do |wiki| %>
+            <tr class="text-center">
+              <td><%= link_to wiki.title, wiki_path(wiki.id) %></td> 
+              <td><%= link_to "Edit", edit_wiki_path(wiki.id) %></td>
+              <td></td>
+            </tr>
+            <% end %> 
+          </table>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+  
+
+
+
+
+
+
