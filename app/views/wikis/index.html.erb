@@ -14,7 +14,7 @@
             <tr class="text-center">
               <td><%= link_to wiki.title, wiki_path(wiki.id) %></td> 
               <td><%= link_to "Edit", edit_wiki_path(wiki.id) %></td>
-              <td></td>
+              <td><%= link_to "Delete", wiki_path(wiki.id), method: :delete %> </td>
             </tr>
             <% end %> 
           </table>
