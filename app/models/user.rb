@@ -3,4 +3,24 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
+
+def admin?
+   role == 'admin'
+ end
+ 
+ def premium?
+   role == 'premium'
+ end
+
+ def standard?
+  role == 'standard'
+ end
+
+def after_initialize 
+    role = 'standard'
+end
+
+
+
+
 end
