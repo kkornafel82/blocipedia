@@ -1,13 +1,48 @@
+require 'faker'
+
+
 1.times do 
   user = User.new(
-    name:   "member",
-    email:  "member@example.com",
-    password: "helloworld"
+    name:   "member1",
+    email:  "member1@example.com",
+    password: "helloworld",
+    role: "standard"
     )
 
   user.skip_confirmation!
   user.save!
 end
+
+1.times do 
+  user = User.new(
+    name:   "member2",
+    email:  "member2@example.com",
+    password: "helloworld",
+    role: "standard"
+    )
+
+  user.skip_confirmation!
+  user.save!
+end
+
+1.times do 
+  user = User.new(
+    name:   "admin",
+    email:  "admin@example.com",
+    password: "helloworld",
+    role: "admin"
+    )
+
+  user.skip_confirmation!
+  user.save!
+end
+
+50.times do
+   Wiki.create!(
+     title:  Faker::Lorem.sentence,
+     body:   Faker::Lorem.paragraph
+   )
+ end
 
 
 1.times do 
@@ -31,6 +66,8 @@ end
   )
 
 end
+
+
 
 
 puts "Seed finished"
