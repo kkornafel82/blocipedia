@@ -4,23 +4,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-def admin?
-   role == 'admin'
- end
- 
- def premium?
+  def admin?
+    role == 'admin'
+  end
+
+  def premium?
    role == 'premium'
- end
+  end
 
- def standard?
-  role == 'standard'
- end
-
-def after_initialize 
-    role = 'standard'
-end
-
-
-
-
+  def standard?
+    role == 'standard'
+  end
 end
