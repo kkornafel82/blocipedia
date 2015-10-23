@@ -16,3 +16,5 @@ class User < ActiveRecord::Base
     role == 'standard'
   end
 end
+
+
