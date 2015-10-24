@@ -13,7 +13,7 @@ group :development  do
   gem 'sqlite3'
 end
 
-
+gem 'stripe'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pundit'
