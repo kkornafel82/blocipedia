@@ -2,7 +2,7 @@
 <div class="jumbotron text-center">
   <h1>Blocipedia: Social, Markdown Wikis</h1>
   <p>
-      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %>
+      <%= link_to "Enter", wikis_path, class: 'btn btn-info btn-lg active' %>
   </p>
 </div>
 <br>
@@ -10,11 +10,11 @@
 
 <div class="row text-center">
   <div class="col-md-6">
-    <h3>Create as many wikis as you want</h3><br><br>
-    <h4> Free Plan </h4>
+    <h3>Create as many wikis as you want</h3><br>
+    <%= link_to "Free Plan", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %><br>
   </div>
   <div class="col-md-6">
-    <h3>Create Private Wikis</h3><br><br>
-    <h4> Premium Plan </h4> 
+    <h3>Create private wikis</h3><br>
+    <%= link_to "Premium Plan", new_charge_path, class: 'btn btn-primary btn-lg btn-block' %> 
   </div>
 </div>
