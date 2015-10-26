@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'about' => 'welcome#about'
 
+  get 'downgrade' => 'users#downgrade'
+
   root to: 'welcome#index'
   
 end
