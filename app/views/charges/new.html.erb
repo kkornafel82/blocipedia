@@ -1,0 +1,11 @@
+<div class="col-md-8">
+<h3>Blocipedia Premium Plan</h3><br>
+<h5> With Blocipedia's all new premium plan, members can enjoy exclusive access to customize their own private wikis. Work alone or add collaborators and use a team effort to take your wikis to the next level </h5><br><br>
+<p class="text-primary"> Premium Plan Price only $10.00 </p><br>
+
+
+<%= form_tag charges_path do %>
+   <script class='stripe-button' src="https://checkout.stripe.com/checkout.js" data-key="<%= @stripe_btn_data[:key] %>" data-amount=<%= @stripe_btn_data[:amount] %> data-description="<%= @stripe_btn_data[:description] %>" ></script>
+ <% end %>
+
+</div>
