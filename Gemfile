@@ -16,6 +16,7 @@ group :development  do
 end
 
 gem 'stripe'
+gem 'redcarpet'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pundit'

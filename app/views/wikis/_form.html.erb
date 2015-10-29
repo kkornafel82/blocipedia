@@ -27,8 +27,8 @@
    </div>
    <div class="col-md-6">
     <h2>Preview</h2>
-    <h4><%= @wiki.title %></h4>
-    <p><%= @wiki.body %></p>
+    <h4><%= markdown_to_html @wiki.title %></h4>
+    <p><%= markdown_to_html @wiki.body %></p>
   </div>
 
   
