@@ -31,7 +31,7 @@ class ApplicationPolicy
   end
 
   def destroy?
-    update?
+    user.present?
   end
 
   def scope
