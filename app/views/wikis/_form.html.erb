@@ -32,12 +32,9 @@
                <td></td>
              </tr>
             </thead>
-             <% @users.each do |user| %>
-            <tr class="text-center">
-              <td><%= user.name %></td>
-              <td><%= link_to "Add", wiki_collaborators_path(wiki.id), method: :post, class: 'btn btn-success' %></td>
-            </tr>
-            <% end %>
+            <%# @users.each do |user| %>
+             <%= render partial: "new_collaborator", locals: {wiki: wiki} %>
+            <%# end %>
           </table>
        <% else %>
        <p> This wiki is public </p>
