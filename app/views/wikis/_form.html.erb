@@ -35,7 +35,7 @@
              <% @users.each do |user| %>
             <tr class="text-center">
               <td><%= user.name %></td>
-              <td><%= link_to "Add", wiki_collaborators_path(wiki.id), class: 'btn btn-success' %></td>
+              <td><%= link_to "Add", wiki_collaborators_path(wiki.id), method: :post, class: 'btn btn-success' %></td>
             </tr>
             <% end %>
           </table>
