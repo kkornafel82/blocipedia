@@ -23,28 +23,53 @@
        
        <% if @wiki.private == true %>
           <p> This wiki is private </p><br>
-          
+        <div>
           <h2> Add Collaborators </h2><br>
-          <table class="table table-striped table-bordered table-condensed table-hover" width="647">
-            <thead>
-             <tr class="text-center">
-               <td><strong>User</strong></td>
-               <td></td>
-             </tr>
-            </thead>
+          
+               <h4><strong>Enter Email to Add Collaborator</strong></h4>
+        </div>
             <%# @users.each do |user| %>
              <%= render partial: "new_collaborator", locals: {wiki: wiki} %>
             <%# end %>
-          </table>
        <% else %>
        <p> This wiki is public </p>
        <% end %>
 
-   </div>
-   <div class="col-md-6">
+ </div>
+   
+<div class="col-md-6">
     <h2>Preview</h2>
     <h4><%= markdown_to_html @wiki.title %></h4>
     <p><%= markdown_to_html @wiki.body %></p>
-  </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+
+    <h2 class="text-center"> Current Collaborators </h2><br>
+      <div class="table-center">
+        <table class="table table-bordered" width="125">
+                <thead>
+                <tr class="text-center">
+                   <td><strong>User Name</strong></td>
+                   <td></td>
+                </tr>
+                </thead>
+        <%= render partial: "current_collaborators", locals: {wiki: wiki} %>
+        </table>
+      </div>
+</div>
 
   

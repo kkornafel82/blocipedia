@@ -1,7 +1,10 @@
-<%= form_for [wiki, Collaborator.new] do |f| %>
-  <tr class="text-center">
-    <!-- <td><%# user.name %><%# hidden_field_tag :collaborator, user.id %></td> -->
-    <td><%= text_field_tag :email %></td>
-    <td><%= f.submit "Add", class: 'btn btn-success' %></td>
-  </tr>
-<% end %>
+
+  <%= form_for [wiki, Collaborator.new] do |f| %>
+    <div>
+      <!-- <td><%# user.name %><%# hidden_field_tag :collaborator, user.id %></td> -->
+      <p><%= text_field_tag :email %>  <%= f.submit "Add", class: 'btn btn-success' %></p>
+    </div>
+  <% end %>
+
+
+

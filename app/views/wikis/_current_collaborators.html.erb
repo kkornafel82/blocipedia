@@ -1,0 +1,8 @@
+
+ <% wiki.collaborators.each do |collaborator| %>
+   <tr class="text-center"> 
+    <td> <%=collaborator.user.name%></td>
+    <td><%= link_to "Delete", wiki_collaborator_path(wiki.id, collaborator.id), method: :delete, class: 'btn btn-warning' %>
+   </tr>
+  <% end %>
+
