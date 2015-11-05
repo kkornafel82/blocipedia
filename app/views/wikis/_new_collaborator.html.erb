@@ -1,0 +1,10 @@
+
+  <%= form_for [wiki, Collaborator.new] do |f| %>
+    <div>
+      <!-- <td><%# user.name %><%# hidden_field_tag :collaborator, user.id %></td> -->
+      <p><%= text_field_tag :email %>  <%= f.submit "Add", class: 'btn btn-success' %></p>
+    </div>
+  <% end %>
+
+
+

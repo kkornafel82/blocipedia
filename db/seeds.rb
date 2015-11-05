@@ -27,6 +27,30 @@ end
 
 1.times do 
   user = User.new(
+    name:   "member3",
+    email:  "member3@example.com",
+    password: "helloworld",
+    role: "standard"
+    )
+
+  user.skip_confirmation!
+  user.save!
+end
+
+1.times do 
+  user = User.new(
+    name:   "member4",
+    email:  "member4@example.com",
+    password: "helloworld",
+    role: "standard"
+    )
+
+  user.skip_confirmation!
+  user.save!
+end
+
+1.times do 
+  user = User.new(
     name:   "admin",
     email:  "admin@example.com",
     password: "helloworld",
@@ -43,7 +67,7 @@ options = [true, false]
    Wiki.create!(
      title:  Faker::Lorem.sentence,
      body:   Faker::Lorem.paragraph,
-     user: users.sample,
+     user:   users.sample,
      private: options.sample
    )
  end

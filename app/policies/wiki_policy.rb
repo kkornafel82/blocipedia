@@ -17,13 +17,13 @@ class WikiPolicy < ApplicationPolicy
         wikis = scope.all
       elsif user.premium?
         the_wikis.each do |wiki|
-          if wiki.public? || wiki.user == user# || wiki.users.includes?(user)
+          if wiki.public? || wiki.user == user || wiki.users.include?(user)
             wikis << wiki
           end
         end
       elsif user.standard?
         the_wikis.each do |wiki|
-          if wiki.public?
+          if wiki.public? 
             wikis << wiki
           end
         end
